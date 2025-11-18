@@ -6,6 +6,11 @@ library(dplyr)
 # proportions of SDs
 sds <- seq(0.2, 2, by = .2)
 
+# Check if "fit-objects/fully-hierarchical" folder exists; if not, create it
+if (!dir.exists("fit-objects/fully-hierarchical")) {
+  dir.create("fit-objects/fully-hierarchical")
+}
+
 for(s in 1:length(sds)){
   load(paste0("simulated-data-1000/SDmult_", sds[s], "_centr_TRUE_.RData")) # centered at zero, so no differences between hard and easy at the group-level
   

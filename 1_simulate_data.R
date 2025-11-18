@@ -114,6 +114,11 @@ for(sd_multiplier in sd_multipliers){
 
 ## simulate data with 10000 trials per condition without correlation ----------
 
+# Check if "simulated-data-10000" folder exists; if not, create it
+if (!dir.exists("simulated-data-10000")) {
+  dir.create("simulated-data-10000")
+}
+
 n_subj <- 1000 # Number of subjects
 n_trials <- 10000 # Number of trials per condition
 
